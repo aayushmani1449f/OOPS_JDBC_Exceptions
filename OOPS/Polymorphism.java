@@ -2,6 +2,7 @@ package OOPS;
 
 class MathOperations {
     // Method Overloading (Compile-time Polymorphism)
+    // Same method name, different parameters
     int add(int a, int b) {
         return a + b;
     }
@@ -19,6 +20,7 @@ class Shape {
 
 class Circle extends Shape {
     // Method Overriding (Run-time Polymorphism)
+    // Subclass provides a specific implementation of a method defined in its superclass
     @Override
     void draw() {
         System.out.println("Drawing a circle");
@@ -32,6 +34,6 @@ public class Polymorphism {
         System.out.println("Sum of doubles: " + math.add(5.5, 10.5));
 
         Shape shape = new Circle();
-        shape.draw(); // Calls the overridden method in Circle
+        shape.draw(); // Calls the overridden method in Circle at runtime
     }
 }

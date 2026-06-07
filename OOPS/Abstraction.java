@@ -1,13 +1,15 @@
 package OOPS;
 
+// Abstraction using Abstract Class (Partial or Full Abstraction)
 abstract class Vehicle {
-    abstract void start(); // Abstract method
+    abstract void start(); // Abstract method (no body)
 
-    void stop() { // Concrete method
+    void stop() { // Concrete method (has body)
         System.out.println("Vehicle stopped.");
     }
 }
 
+// Class vs Interface: A class extends another class (single inheritance)
 class Motorcycle extends Vehicle {
     @Override
     void start() {
@@ -15,8 +17,10 @@ class Motorcycle extends Vehicle {
     }
 }
 
+// Abstraction using Interface (100% Abstraction traditionally, but Java 8+ allows default methods)
+// Class vs Interface: A class implements an interface (multiple inheritance allowed)
 interface Drivable {
-    void drive();
+    void drive(); // Abstract method by default
 }
 
 class ElectricCar implements Drivable {
